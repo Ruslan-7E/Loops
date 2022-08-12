@@ -36,15 +36,24 @@ public class Main {
         for (int year = 0; year <= currentYear + 100; year += 79) {
             lastAppearanceYear = year;
         }
-        int previousAppearanceYear = 0;
-        for (int year = 0; year < currentYear - 200; year += 79) {
-            previousAppearanceYear = year;
+//        int previousAppearanceYear = 0;
+//        for (int year = 0; year < currentYear - 200; year += 79) {
+//            previousAppearanceYear = year;
+//        }
+
+        // Эталонное решение от наставника - ниже
+        int prev = currentYear - 200;
+        for (int year = 0; year < currentYear + 100; year += 79) {
+            if (year > prev) {
+                System.out.println(year);
+            }
         }
 
         // Вывести ниже все появления комет за предыдущие 200 лет + след. появление кометы
-        for (int year = previousAppearanceYear; year <= lastAppearanceYear; year += 79) {
-            System.out.println(year);
-        }
+
+//        for (int year = previousAppearanceYear; year <= lastAppearanceYear; year += 79) {
+//            System.out.println(year);
+//        }
 
 
     }
